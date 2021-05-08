@@ -15,27 +15,29 @@
 	<title>SberMed</title>
 </head>
 <body class="bg">
-	<div class="container">
-		<div class="logo-section">
-			<img src="media/img/logo.svg" alt="" class="logo">
-			<span class="name">СБЕР</span>
-			<br>
+	<form action="" id="loginForm" method="post" name="loginForm">
+		<div class="container">
+			<div class="logo-section">
+				<img src="media/img/logo.svg" alt="" class="logo">
+				<span class="name">СБЕР</span>
+				<br>
+			</div>
+			<div class="info-section">
+				<span style="font-size: 1vw;">Для продолжения пожайлуста авторизуйтесь</span>
+			</div>
+			<div class="auth-section">
+				<span>Логин</span>
+				<input type="text" class="login-area" id="username" name="username">
+				<span>Пароль</span>
+				<input type="text" class="pass" id="password" name="password">
+			</div>
+			<div class="enter-section">
+				<input type="submit" value="Войти" class="input-button">
+			</div>
+			<div class="reg-section">
+				<a href="registration" class="reg-link">Регистрация</a>
+			</div>
 		</div>
-		<div class="info-section">
-			<span style="font-size: 1vw;">Для продолжения пожайлуста авторизуйтесь</span>
-		</div>
-		<div class="auth-section">
-			<span>Логин</span>
-			<input type="text" class="login-area">
-			<span>Пароль</span>
-			<input type="text" class="pass">
-		</div>
-		<div class="enter-section">
-			<input type="button" value="Войти" class="input-button">
-		</div>
-		<div class="reg-section">
-			<a href="registration" class="reg-link">Регистрация</a>
-		</div>
-	</div>
+	</form>
 </body>
 </html>
