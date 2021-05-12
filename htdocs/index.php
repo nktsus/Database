@@ -23,7 +23,7 @@
 				<br>
 			</div>
 			<div class="info-section">
-				<span style="font-size: 1vw;">Для продолжения пожайлуста авторизуйтесь</span>
+				<span style="font-size: 1vw;">Для продолжения пожайлуста пройдите авторизацию</span>
 			</div>
 			<div class="auth-section">
 				<span>Логин</span>
