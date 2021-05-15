@@ -19,7 +19,7 @@ if (isset($_COOKIE['id']) and isset($_COOKIE['hash']))
     }
     else
     {
-        header("Location: livefeed.php"); exit();
+        
     }
 }
 else
