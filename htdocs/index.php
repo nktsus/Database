@@ -25,15 +25,15 @@
 			</div>
 			<div class="auth-section">
 				<span>Логин</span>
-				<input type="text" class="login-area" id="usernameInput" name="usernameInput">
+				<input type="text" class="login-area" id="usernameInput" name="usernameInput1">
 				<span>Пароль</span>
-				<input type="text" class="pass" id="passwordInput" name="passwordInput">
+				<input type="text" class="pass" id="passwordInput" name="passwordInput1">
 			</div>
 			<div class="enter-section">
-				<input type="submit" value="Войти" class="input-button">
+				<input type="submit" value="Войти" class="input-button" name="submitlogin">
 			</div>
 			<div class="reg-section">
-				<a href="registration" class="reg-link">Регистрация</a>
+				<a href="registration.php" class="reg-link">Регистрация</a>
 			</div>
 		</div>
 	</form>
@@ -41,24 +41,27 @@
 </html>
 
 <?php 
-$query = "SELECT * FROM auth_users_list";
+
+	$query = "SELECT * FROM auth_users_list";
 	$result = mysql_query($query) or die (mysql_error()); 
 	$row = mysql_fetch_row($result); 
 
 
-
-	if(isset($_POST['usernameInput']) && isset($_POST['passwordInput'])){
-    $username = $_POST['usernameInput'];    
-    $password = $_POST['passwordInput'];
+	#if(isset($_POST['usernameInput']) && isset($_POST['passwordInput'])){
+	if(isset($_POST['submitlogin']) && isset($_POST['usernameInput1']) && isset($_POST['passwordInput1'])){
+	    $username = $_POST['usernameInput'];    
+	    $password = $_POST['passwordInput'];
 	}
 	else{
-	   echo 'Please check username and password.';
+	   echo("Please check username and password");
 	}
 
 	if($username == $row ['username'] && $password == $row ['password']){
 	    
+	    echo("DONE!!!");
 	} 
 	else{
-	    echo 'Username or password is wrong.';
+	    
+	    echo("Username or password is wrong.");
 	} 
 ?>
