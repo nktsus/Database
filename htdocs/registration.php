@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
     }
 
     // проверяем, не сущестует ли пользователя с таким именем
-    $query = mysqli_query($link, "SELECT user FROM auth_users_list WHERE user_login='".mysqli_real_escape_string($link, $_POST['login'])."'");
+    $query = mysqli_query($link, "SELECT id FROM users WHERE username='".mysqli_real_escape_string($link, $_POST['login'])."'");
     if(mysqli_num_rows($query) > 0)
     {
         $err[] = "Пользователь с таким логином уже существует в базе данных";
@@ -31,12 +31,14 @@ if(isset($_POST['submit']))
     {
 
         $login = $_POST['login'];
+        $password = ($_POST['password']);
+        $firstname = ($_POST['firstname']);
+        $lastname = ($_POST['lastname']);
+        $email = ($_POST['email']);
 
-        // Убераем лишние пробелы и делаем двойное хеширование
-        $password = md5(md5(trim($_POST['password'])));
 
-        mysqli_query($link,"INSERT INTO users SET user_login='".$login."', user_password='".$password."'");
-        header("Location: login.php"); exit();
+        mysqli_query($link,"INSERT INTO users SET username='".$login."', passw='".$password."', firstname='".$firstname."', lastname='".$lastname."', email='".$email."'");
+        header("Location: index.php"); exit();
     }
     else
     {
@@ -52,5 +54,8 @@ if(isset($_POST['submit']))
 <form method="POST">
 Логин <input name="login" type="text" required><br>
 Пароль <input name="password" type="password" required><br>
+Имя <input name="firstname" type="text" required><br>
+Фамилия <input name="lastname" type="text" required><br>
+E-mail <input name="email" type="text"><br>
 <input name="submit" type="submit" value="Зарегистрироваться">
 </form>
