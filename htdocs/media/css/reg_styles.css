@@ -1,0 +1,16 @@
+/*FONTS
+font-family: 'Quicksand', sans-serif;
+*/
+
+.bg {
+	background: url(img/background.svg) no-repeat;
+	background-size: cover;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title-container {
+	
+}
