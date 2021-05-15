@@ -1,4 +1,4 @@
-<?
+<?php
 // Страница регистрации нового пользователя
 
 // Соединямся с БД
@@ -48,9 +48,25 @@ if(isset($_POST['submit']))
     }
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="media/css/reg_styles.css">
+</head>
+<body class="bg">
+    <form method="POST" class="form-class">
+        <div class="title-container">
+            <span>Логин</span>
+            <input name="login" type="text" required>
+            <span>Пароль</span>
+            <input name="password" type="password" required>
+            <input name="submit" type="submit" value="Зарегистрироваться">
+        </div>
+    </form>
 
-<form method="POST">
-Логин <input name="login" type="text" required><br>
-Пароль <input name="password" type="password" required><br>
-<input name="submit" type="submit" value="Зарегистрироваться">
-</form>
+</body>
+</html>
+
+
+
