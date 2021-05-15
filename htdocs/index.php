@@ -1,8 +1,6 @@
 <?php
-	require_once("mysql.php")
+	require_once("mysql.php");
 ?>
-
-
 
 <html lang="en">
 <head>
@@ -27,9 +25,9 @@
 			</div>
 			<div class="auth-section">
 				<span>Логин</span>
-				<input type="text" class="login-area" id="username" name="username">
+				<input type="text" class="login-area" id="usernameInput" name="usernameInput">
 				<span>Пароль</span>
-				<input type="text" class="pass" id="password" name="password">
+				<input type="text" class="pass" id="passwordInput" name="passwordInput">
 			</div>
 			<div class="enter-section">
 				<input type="submit" value="Войти" class="input-button">
@@ -41,3 +39,26 @@
 	</form>
 </body>
 </html>
+
+<?php 
+$query = "SELECT * FROM auth_users_list";
+	$result = mysql_query($query) or die (mysql_error()); 
+	$row = mysql_fetch_row($result); 
+
+
+
+	if(isset($_POST['usernameInput']) && isset($_POST['passwordInput'])){
+    $username = $_POST['usernameInput'];    
+    $password = $_POST['passwordInput'];
+	}
+	else{
+	   echo 'Please check username and password.';
+	}
+
+	if($username == $row ['username'] && $password == $row ['password']){
+	    
+	} 
+	else{
+	    echo 'Username or password is wrong.';
+	} 
+?>
