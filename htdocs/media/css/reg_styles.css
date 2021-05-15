@@ -3,14 +3,26 @@ font-family: 'Quicksand', sans-serif;
 */
 
 .bg {
-	background: url(img/background.svg) no-repeat;
+	background: url(media/img/background.svg) no-repeat;
 	background-size: cover;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	height: 100%;
 }
 
 .title-container {
-	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.title-container > span {
+	text-align: center;
+	font-size: 120%;
+}
+
+.bg > form {
+	padding-top: 25%;
 }
