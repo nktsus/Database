@@ -53,7 +53,7 @@ if(isset($_POST['submit']))
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registration</title>
+    <title>Registration | SberMed</title>
     <link rel="stylesheet" type="text/css" href="media/css/reg_styles.css">
 </head>
 <body class="bg">

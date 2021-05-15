@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="media/login_styles.css">
-	<title>SberMed</title>
+	<title>Login | SberMed</title>
 </head>
 <body class="bg">
 	<form action="" id="loginForm" method="post" name="loginForm">
