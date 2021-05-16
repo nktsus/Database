@@ -1,6 +1,26 @@
 <?php
 require_once("mysql.php");
 require_once("check1.php");
+	$clinics = $_POST['clinics'];
+	$employees = $_POST['employees'];
+	$clinic_services = $_POST['clinic_services'];
+	$date = $_POST['date'];
+	$visituser = $userdata['id'];
+	if(isset($_POST['submit']))
+	{
+		//mysql_query($link,"INSERT INTO news SET ntitle='".$ntitle."', ntext='".$ntext."', ncreator='".$nuser."'");
+		$sql = "INSERT INTO visits (`visit_userid`, `visit_clinid`, `visit_empid`, `visit_servid`, `visit_date`) VALUES ('".$visituser."', '".$clinics."', '".$employees."', '".$clinic_services."', '".$date."')";
+
+		if(mysqli_query($link, $sql)){
+		    echo "Records inserted successfully.";
+		} 
+		else{
+		    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+		}
+
+		header("Location: livefeed.php"); exit();
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -35,8 +55,8 @@ require_once("check1.php");
   				echo "<select style = 'width: 230px;height: 22px;' name = 'employees'>";
 			  	echo "<option value='0'></option>";
   				while($object2 = mysqli_fetch_object($result_select2)){
- 				echo "<option value = '$object2->id' > $object2->emp_name $object2->emp_surname </option>";}
-  			    echo "</select>";
+  						echo "<option value = '$object2->id' > $object2->emp_name $object2->emp_surname </option>";}
+  				echo "</select>";
   				?>
 				<br>
 				<br>
