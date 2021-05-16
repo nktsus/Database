@@ -1,8 +1,6 @@
 <?php 
 require_once("mysql.php");
 require_once("check1.php");
-print "Привет, ".$userdata['username']."";
-
 	$ntitle = $_POST['title1'];
 	$ntext = $_POST['body1'];
 	$nuser = $userdata['id'];
@@ -27,14 +25,17 @@ print "Привет, ".$userdata['username']."";
 <html>
 <head>
 	<title>Create news | SberMed</title>
+	<link rel="stylesheet" type="text/css" href="media/css/create_news_styles.css">
 </head>
-<body>
+<body class="bg">
     <form method="POST" class="form-class">
         <div class="title-container">
-        	<span>Заголовок</span>
-			<input type="text" name="title1">
-			<span>Текст новости</span>
-			<input type="text" name="body1">
+        	<span style="margin-top: 2%; font-size: 150%;">Заголовок</span>
+			<input type="text" name="title1" style="text-align: center; margin-top: 3%; width: 80%; margin-left: 10%;">
+			<span style="margin-top: 5%; font-size: 120%;">Текст новости</span>
+			<div class="textarea-style">
+				<textarea name="body1" rows="10"></textarea>
+			</div>
             <input name="submit" type="submit" value="Опубликовать">
         </div>
     </form>

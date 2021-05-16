@@ -1,0 +1,46 @@
+/*FONTS
+font-family: 'Quicksand', sans-serif;
+*/
+
+.bg	{
+	background-image: url(../img/background.svg);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0;
+	margin-top: 5%;
+}
+
+.form-class {
+	display: flex;
+	justify-content: center;
+
+	width: 80%;
+	margin-left: 10%;
+}
+
+.title-container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 40%;
+
+	margin-top: 15%;
+
+	font-family: 'Quicksand', sans-serif;
+
+}
+
+.textarea-style {
+	padding-top: 2%;
+}
+
+input[type=submit] {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 5%;
+	font-size: 110%;
+	font-family: 'Quicksand', sans-serif;
+	
+	cursor: pointer;
+}
