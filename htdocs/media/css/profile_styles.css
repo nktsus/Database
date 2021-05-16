@@ -1,0 +1,30 @@
+/*FONTS
+font-family: 'Quicksand', sans-serif;
+*/
+
+.bg {
+	background-image: url(../img/background.svg);
+	display: flex;
+	justify-content: center;
+
+	font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+
+	margin-top: 20%;
+
+	background-color: rgba(255,255,255,0.95);
+	border: 1px solid black;
+}
+
+.person-logo {
+	border: 1px solid black;
+}
+
+.info {
+	border: 1px solid black;
+}
