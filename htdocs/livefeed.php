@@ -43,7 +43,7 @@ if(isset($_POST['submit'])){
               <input name="submit" type="submit" value="Создать новость">
               <a href="profile.php">Профиль</a>
               <a href="visitregistration.php">Зарегистрироваться на прием</a>
-              <a href="">История посещений</a>
+              <a href="viewvisits.php">История посещений</a>
           </div>
       </nav>
     </form>

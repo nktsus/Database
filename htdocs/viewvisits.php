@@ -46,9 +46,9 @@ require_once("check1.php");
 <html>
 <head>
 	<title>Visits history | SberMed</title>
-	<link rel="stylesheet" href="media/css/profile_styles.css">
+	<link rel="stylesheet" href="media/css/view_visits.css">
 </head>
 <body class="bg">
-	
+	<a href="livefeed.php">Назад</a>
 </body>
 </html>
