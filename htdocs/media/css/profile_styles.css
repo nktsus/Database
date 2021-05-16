@@ -15,16 +15,54 @@ font-family: 'Quicksand', sans-serif;
 	flex-direction: column;
 	width: 80%;
 
-	margin-top: 20%;
+	margin-top: 12%;
 
 	background-color: rgba(255,255,255,0.95);
 	border: 1px solid black;
 }
 
 .person-logo {
-	border: 1px solid black;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-size: 170%;
+}
+.logo-class {
+	margin-left: 10%;
+	display: flex;
+	align-items: center;
 }
 
 .info {
-	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
 }
+
+.person-info {
+	margin-left: 5%;
+	margin-top: 2%;
+	display: flex;
+	flex-direction: column;
+}
+
+.person-info > span {
+	margin-bottom: 2%;
+}
+
+.form-class {
+	width: 20%;
+	margin-left: 40%;
+	text-align: center;
+	font-size: 120%;
+}
+
+.form-class > a{
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+}
+.form-class input[type=checkbox] {
+	opacity: 0;
+}
+
+

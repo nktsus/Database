@@ -18,19 +18,25 @@ $html_reg_date = "".$userdata['reg_date']."";
 <body class="bg">
 	<div class="container">
 		<div class="person-logo">
-			<span class="hello">Привет, <?php echo $html_login;?></span>
+			<span style="margin-top: 5%; margin-bottom: 5%;">Привет, <?php echo $html_login;?></span>
+			<div class="logo-class">
+				<img src="media/img/logo.svg" alt="">
+			</div>
 		</div>
 		<div class="info">
-			<span>Персональная информация</span>
-			<span>Имя: <?php echo $html_name;?></span>
-			<span>Фамилия:<?php echo $html_lastname;?></span>
-			<span>E-mail: <?php echo $html_email;?></span>
-			<span>Дата регистрации: <?php echo $html_reg_date;?></span>
+			<span style="text-align: center; font-size: 150%;">Персональная информация</span>
+			<div class="person-info">
+				<span>Имя: <?php echo $html_name;?></span>
+				<span>Фамилия: <?php echo $html_lastname;?></span>
+				<span>E-mail: <?php echo $html_email;?></span>
+				<span>Дата регистрации: <?php echo $html_reg_date;?></span>
+			</div>
 		</div>
 		<form method="POST" class="form-class">
-        	<div class="title-container">
-            	<a href="logout.php">Выйти из профиля</a>
-        	</div>
+			<a href="livefeed.php">Назад</a>
+            <hr>
+        	<a href="logout.php">Выйти из профиля</a>
+        	<input type="checkbox" disabled="true">
     	</form>
 	</div>
 </body>
