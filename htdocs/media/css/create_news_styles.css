@@ -41,6 +41,22 @@ input[type=submit] {
 	margin-top: 5%;
 	font-size: 110%;
 	font-family: 'Quicksand', sans-serif;
-	
+
 	cursor: pointer;
 }
+
+.back-link {
+	margin-top: 2%;
+	margin-left: 40%;
+	width: 20%;
+
+	border: 2px solid black;
+	border-radius: 10%;
+
+}
+
+.back-link > a {
+	text-decoration: none;
+	color: #000;
+}
+

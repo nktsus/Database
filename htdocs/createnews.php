@@ -37,6 +37,9 @@ require_once("check1.php");
 				<textarea name="body1" rows="10"></textarea>
 			</div>
             <input name="submit" type="submit" value="Опубликовать">
+            <div class="back-link">
+            	<a href="livefeed.php">Назад</a>
+            </div>
         </div>
     </form>
 </body>
