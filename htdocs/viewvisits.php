@@ -5,7 +5,7 @@ require_once("check1.php");
 	$userid = $userdata['id'];
 	//$sql = "SELECT * FROM visits WHERE visit_userid = '".$userid."'";
 	//$sql = "INSERT INTO visits (`visit_userid`, `visit_clinid`, `visit_empid`, `visit_servid`, `visit_date`) VALUES ('".$visituser."', '".$clinics."', '".$employees."', '".$clinic_services."', '".$date."')";
-	$sql = mysqli_query($link, 'SELECT * FROM `visits`');
+	$sql = mysqli_query($link, "SELECT * FROM `visits` WHERE visit_userid ='$userid' ");
   	while ($result = mysqli_fetch_array($sql)){
   		echo "<br>" ;
     	echo "{$result['visit_clinid']}";
