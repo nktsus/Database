@@ -1,8 +1,7 @@
 <?php 
 require_once("mysql.php");
 require_once("check1.php");
-print "Привет, ".$userdata['username']."";
-echo "<br>" ;
+$html_username = "".$userdata['username']."";
 if(isset($_POST['submit'])){
 	header("Location: createnews.php"); exit();
 }
@@ -31,14 +30,28 @@ if(isset($_POST['submit'])){
 <html>
 <head>
 	<title>Live feed | SberMed</title>
+  <link rel="stylesheet" href="media/css/livefeed_styles.css">
 </head>
-<body>
+<body class="bg">
     <form method="POST" class="form-class">
-        <div class="title-container">
-            <input name="submit" type="submit" value="Создать новость">
-            <a href="profile.php">Профиль</a>
-            <a href="visitregistration.php">Зарегистрироваться на прием</a>
+      <nav>
+        <div class="username">
+          <span>Рады видеть вас снова,   <?php echo $html_username ?></span>
+          <input type="checkbox" disabled="true" style="opacity: 0;">
         </div>
+          <div class="title-container">
+              <input name="submit" type="submit" value="Создать новость">
+              <a href="profile.php">Профиль</a>
+              <a href="visitregistration.php">Зарегистрироваться на прием</a>
+              <a href="">История посещений</a>
+          </div>
+      </nav>
     </form>
+  
 </body>
 </html>
+
+
+
+
+
