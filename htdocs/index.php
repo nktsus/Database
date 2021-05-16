@@ -10,7 +10,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="media/login_styles.css">
+	<link rel="stylesheet" href="media/css/login_style.css">
 	<title>Login | SberMed</title>
 </head>
 <body class="bg">
@@ -22,15 +22,14 @@
 				<br>
 			</div>
 			<div class="info-section">
-				<span style="font-size: 1vw;">Для продолжения пожайлуста пройдите авторизацию</span>
+				<span style="margin-left: 2%; margin-right: 2%;">Для продолжения пожайлуста пройдите авторизацию</span>
 			</div>
 			<div class="auth-section">
 				<span>Логин</span>
 				<input type="text" class="login-area" id="usernameInput" name="login">
-				<span>Пароль</span>
+				<span style="margin-top: 3%;">Пароль</span>
 				<input type="text" class="pass" id="passwordInput" name="password">
-				<span>Не привязывать сессию к IP (не безопасно)</span>
-				<input type="checkbox" name="not_attach_ip">
+				<input type="checkbox" name="not_attach_ip" disabled="true">
 			</div>
 			<div class="enter-section">
 				<input type="submit" value="Войти" class="input-button" name="submit">
