@@ -18,7 +18,7 @@ require_once("check1.php");
 		    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 		}
 
-		header("Location: livefeed.php"); exit();
+		header("Location: viewvisits.php"); exit();
 	}
 
 ?>
