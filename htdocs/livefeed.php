@@ -16,6 +16,7 @@ if(isset($_POST['submit'])){
     <form method="POST" class="form-class">
         <div class="title-container">
             <input name="submit" type="submit" value="Создать новость">
+            <a href="profile.php">Профиль</a>
         </div>
     </form>
 </body>

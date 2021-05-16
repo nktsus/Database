@@ -24,11 +24,12 @@ print "Привет, ".$userdata['username']."";
 
 <?php
 
-	$title = (addslashes($_POST['title1']));
-	$text = (addslashes($_POST['body1']));
-	$user = ($userdata['id']);
-	mysql_query($link, "INSERT INTO news SET ntitle='".$title."', ntext='".$text."', ncreator='".$user."'");
-	header("Location: livefeed.php"); exit();
-
+	$ntitle = ($_POST['title1']);
+	$ntext = ($_POST['body1']);
+	$nuser = ($userdata['id']);
+	if(isset($_POST['submit'])){
+		mysql_query($link,"INSERT INTO news SET ntitle='".$ntitle."', ntext='".$ntext."', ncreator='".$nuser."'");
+		header("Location: livefeed.php"); exit();
+	}
 
 ?>
