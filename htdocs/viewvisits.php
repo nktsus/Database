@@ -8,16 +8,36 @@ require_once("check1.php");
 	$sql = mysqli_query($link, "SELECT * FROM `visits` WHERE visit_userid ='$userid' ");
   	while ($result = mysqli_fetch_array($sql)){
   		echo "<br>" ;
-    	echo "{$result['visit_clinid']}";
+  		echo "<br>" ;
+
+  		$tmp1 = $result['visit_clinid'];
+  		$sql1 = mysqli_query($link, "SELECT * FROM `clinics` WHERE id = '$tmp1' ");
+  		$result1 = mysqli_fetch_array($sql1);
+    	echo "{$result1['clinicname']}";
     	echo "<br>" ;
-    	echo "{$result['visit_empid']}";
+    	echo "<br>" ;
+
+    	$tmp2 = $result['visit_empid'];
+  		$sql2 = mysqli_query($link, "SELECT * FROM `employees` WHERE id = '$tmp2' ");
+  		$result2 = mysqli_fetch_array($sql2);
+    	echo "{$result2['emp_name']}";
+    	echo " {$result2['emp_surname']}";
     	echo "<br>";
     	echo "<br>" ;
-    	echo "{$result['visit_servid']}";
+    	$tmp3 = $result['visit_servid'];
+  		$sql3 = mysqli_query($link, "SELECT * FROM `clinic_services` WHERE id = '$tmp3' ");
+  		$result3= mysqli_fetch_array($sql3);
+    	echo "{$result3['serv_name']}";
     	echo "<br>";
     	echo "<br>" ;
+    	echo "{$result3['serv_price']}";
+    	echo " рублей";
+    	echo "<br>" ;
+    	echo "<br>" ;
+
     	echo "{$result['visit_date']}";
     	echo "<br>";
+    	echo "===========================================================";
   	}
 
 ?>
