@@ -78,6 +78,21 @@ if(isset($_POST['submit'])){
       $numr = mysqli_num_rows($sql1);
       echo "<span style='font-size: 90%;'>Лайков: {$numr}</span>";
       echo "<br>";
+      echo "Комментарии: ";
+      $sql2 = mysqli_query($link, "SELECT * FROM `comments` where com_postid = '$tmp'");
+      while ($result2 = mysqli_fetch_array($sql2)){
+        echo "<br>" ;
+        $tmp2 = $result2['com_userid'];
+        $sql22 = mysqli_query($link, "SELECT * FROM `users` WHERE id = '$tmp2' ");
+        $result22 = mysqli_fetch_array($sql22);
+        echo "{$result22['username']}: ";
+        //echo "{$result1['username']}";
+        echo "{$result2['com_text']}";
+        echo "<br>" ;
+        echo "{$result2['com_date']}";
+        echo "<br>";
+        }
+       
       }
     ?>
         </div>
