@@ -29,7 +29,7 @@ require_once("check1.php");
 </head>
 <body class="bg">
     <form method="POST" class="form-class">
-        <div class="title-container">
+        <div class="title-container" style="background-color: #fff; border-radius: 10%;">
         	<span style="margin-top: 2%; font-size: 150%;">Заголовок</span>
 			<input type="text" name="title1" style="text-align: center; margin-top: 3%; width: 80%; margin-left: 10%;">
 			<span style="margin-top: 5%; font-size: 120%;">Текст новости</span>
