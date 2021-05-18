@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visits history | SberMed</title>
+  <link rel="stylesheet" href="media/css/view_visits.css">
+</head>
+<body class="bg">
+  <div style="
+      display: flex; margin-left: 25%;
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+
+      margin-top: 10%;
+      width: 50%;
+      background-color: #fff;
+
+  ">
+    <span>
 <?php
 require_once("mysql.php");
 require_once("check1.php");
@@ -13,6 +31,8 @@ require_once("check1.php");
   		$tmp1 = $result['visit_clinid'];
   		$sql1 = mysqli_query($link, "SELECT * FROM `clinics` WHERE id = '$tmp1' ");
   		$result1 = mysqli_fetch_array($sql1);
+
+      $view_res1 = $result['clinicname'];
     	echo "{$result1['clinicname']}";
     	echo "<br>" ;
     	echo "<br>" ;
@@ -37,18 +57,24 @@ require_once("check1.php");
 
     	echo "{$result['visit_date']}";
     	echo "<br>";
-    	echo "===========================================================";
+    	echo "===============================================================";
   	}
 
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Visits history | SberMed</title>
-	<link rel="stylesheet" href="media/css/view_visits.css">
-</head>
-<body class="bg">
-	<a href="livefeed.php">Назад</a>
+  </span>
+  </div>
+	<span style="
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 48%;
+    background-color: #fff;
+  ">
+    <a href="livefeed.php" style="text-decoration: none;
+      text-align: center;
+      ">Назад</a>
+  </span>
 </body>
 </html>
+
+
+
+
