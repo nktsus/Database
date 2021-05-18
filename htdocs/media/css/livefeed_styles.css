@@ -1,0 +1,43 @@
+/*FONTS
+font-family: 'Quicksand', sans-serif;
+*/
+
+.bg {
+	background-image: url(../img/background.svg);
+	width: 95%;
+}
+
+.form-class {
+	margin-top: 5%;
+	margin-left: 2.5%;
+	width: 100%;
+	font-family: 'Quicksand', sans-serif;
+}
+
+nav {
+
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+.username {
+	margin-left: 2%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 2%;
+	justify-content: center;
+}
+
+.title-container {
+	margin-top: 2%;
+	margin-right: 2%;
+}
+
+.title-container > a {
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+
+}

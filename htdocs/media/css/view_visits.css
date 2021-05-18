@@ -1,0 +1,8 @@
+/*FONTS
+font-family: 'Quicksand', sans-serif;
+*/
+
+.bg {
+	background-image: url(../img/background.svg);
+	text-align: center;
+}
