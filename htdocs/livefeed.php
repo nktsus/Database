@@ -48,6 +48,8 @@ if(isset($_POST['submit'])){
         </div>
           <div class="title-container">
               <input name="submit" type="submit" value="Создать новость">
+              <a href="addlike.php">| Поставить лайк</a>
+              <a href="addcomment.php">| Оставить комментарий</a>
               <a href="profile.php">| Профиль</a>
               <a href="visitregistration.php">| Зарегистрироваться на прием</a>
               <a href="viewvisits.php">| История посещений</a>
