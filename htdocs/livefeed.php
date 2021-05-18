@@ -41,9 +41,9 @@ if(isset($_POST['submit'])){
         </div>
           <div class="title-container">
               <input name="submit" type="submit" value="Создать новость">
-              <a href="profile.php">Профиль</a>
-              <a href="visitregistration.php">Зарегистрироваться на прием</a>
-              <a href="viewvisits.php">История посещений</a>
+              <a href="profile.php">| Профиль</a>
+              <a href="visitregistration.php">| Зарегистрироваться на прием</a>
+              <a href="viewvisits.php">| История посещений</a>
           </div>
       </nav>
     </form>

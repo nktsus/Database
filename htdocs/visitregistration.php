@@ -27,11 +27,12 @@ require_once("check1.php");
 <html>
 <head>
 	<title>Profile | SberMed</title>
+	<link rel="stylesheet" href="media/css/visit_reg_styles.css">
 </head>
-<body>
+<body class="bg">
     <form method="POST" class="form-class">
         <div class="title-container">
-            <span  style="margin-left: 45px; margin-right: 35px">Клиника</span>
+            <span>Клиника</span>
 				<?php
 				$sql1 = "SELECT * FROM `clinics`";
   				$result_select1 = mysqli_query($link, $sql1);
@@ -44,7 +45,7 @@ require_once("check1.php");
   				?>
 				<br>
 				<br>
-			<span  style="margin-left: 45px; margin-right: 35px">Сотрудник</span>
+			<span>Сотрудник</span>
 				<?php
 				$sql2 = "SELECT * FROM `employees`";
 				//$sql2 =   "SELECT employees.id, employees.emp_name, employees.emp_surname, employees.emp_posid, positions.positionname ".
@@ -60,7 +61,7 @@ require_once("check1.php");
   				?>
 				<br>
 				<br>
-			<span  style="margin-left: 45px; margin-right: 35px">Услуга</span>
+			<span>Услуга</span>
 				<?php
 				$sql3 = "SELECT * FROM `clinic_services`";
   				$result_select3 = mysqli_query($link, $sql3);
@@ -73,9 +74,10 @@ require_once("check1.php");
   				?>
 				<br>
 				<br>
-			<input type="date" style="width: 300px;" name="date">
-
-            <input name="submit" type="submit" value="Зарегистрироваться">
+			<div class="date-submit">
+				<input type="date" name="date">
+            	<input name="submit" type="submit" value="Зарегистрироваться">
+            </div>	
         </div>
     </form>
 </body>
