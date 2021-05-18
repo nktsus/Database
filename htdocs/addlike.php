@@ -9,6 +9,7 @@ require_once("check1.php");
 		//mysql_query($link,"INSERT INTO news SET ntitle='".$ntitle."', ntext='".$ntext."', ncreator='".$nuser."'");
 		$sql = "INSERT INTO likes (`like_userid`, `like_postid`) VALUES ('".$nuser."', '".$nlike."')";
 		if(mysqli_query($link, $sql)){
+			header("Location: livefeed.php"); exit();
 		} 
 		else{
 		    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
@@ -21,11 +22,11 @@ require_once("check1.php");
 <html>
 <head>
 	<title>Add like | SberMed</title>
-	<link rel="stylesheet" type="text/css" href="media/css/create_news_styles.css">
+	<link rel="stylesheet" type="text/css" href="media/css/add-like_styles.css">
 </head>
 <body class="bg">
     <form method="POST" class="form-class">
-        <div class="title-container" style="background-color: #fff; border-radius: 10%;">
+        <div class="title-container">
         	<span>Выбор новости</span>
 				<?php
 				$sql1 = "SELECT * FROM `news`";
@@ -41,8 +42,9 @@ require_once("check1.php");
 				<br>
             <input name="submit" type="submit" value="Поставить лайк">
             <div class="back-link">
-            	<a href="chat.php">Назад</a>
+            	<a href="livefeed.php">Назад</a>
             </div>
+            <span class="invisible">invisible</span>
         </div>
     </form>
 </body>
