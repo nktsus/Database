@@ -65,7 +65,6 @@ require_once("check1.php");
   </div>
 	<span style="
     font-family: 'Quicksand', sans-serif;
-    margin-left: 48%;
     background-color: #fff;
   ">
     <a href="livefeed.php" style="text-decoration: none;
