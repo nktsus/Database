@@ -47,7 +47,7 @@ require_once("check1.php");
 				<br>
 			<span>Сотрудник</span>
 				<?php
-				$sql2 = "SELECT * FROM `employees`";
+				$sql2 = "SELECT * FROM `employees` ";
 				//$sql2 =   "SELECT employees.id, employees.emp_name, employees.emp_surname, employees.emp_posid, positions.positionname ".
                   //      "FROM employees, posiions ".
                     //    "WHERE employees.emp_posid = posiions.id ";

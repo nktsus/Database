@@ -21,10 +21,17 @@ if(isset($_POST['submit'])){
 		//print"".$row['n_title']."";
 		//print"".$row['n_text']."";
 
+<<<<<<< HEAD
 	//}	
-	*/
+	
+=======
+	//}
+>>>>>>> ec02b4a920b67ff0ece9ab68c35c3fe33f4707f4
 	//echo "</table>";
+  */
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -44,6 +51,7 @@ if(isset($_POST['submit'])){
               <a href="profile.php">| Профиль</a>
               <a href="visitregistration.php">| Зарегистрироваться на прием</a>
               <a href="viewvisits.php">| История посещений</a>
+              <a href="chat.php">| Чат</a>
           </div>
       </nav>
       <div style="
