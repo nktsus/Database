@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
 	//echo "<table border=1>";
 	$tmp11 = $_POST['messages'];
 
-	$sql = mysqli_query($link, "SELECT * FROM `messages` WHERE mes_sender = '$tmp11' OR mes_reciever = '$tmp11'");
+	$sql = mysqli_query($link, "SELECT * FROM `messages` WHERE mes_sender = '$tmp11' AND mes_reciever = '$html_username' OR mes_reciever = '$tmp11' AND mes_sender = '$html_username'");
   	while ($result = mysqli_fetch_array($sql)) {
   		echo "<br>" ;
   		echo "<br>" ;
