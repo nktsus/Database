@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
 
 	//echo "<table border=1>";
 
-	$sql = mysqli_query($link, 'SELECT `n_title`,`n_text` FROM `news`');
+	/*$sql = mysqli_query($link, 'SELECT `n_title`,`n_text` FROM `news`');
   	while ($result = mysqli_fetch_array($sql)) {
   		echo "<br>" ;
     	echo "{$result['n_title']}";
@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 		//print"".$row['n_text']."";
 
 	//}	
-	
+	*/
 	//echo "</table>";
 ?>
 
@@ -46,6 +46,26 @@ if(isset($_POST['submit'])){
               <a href="viewvisits.php">| История посещений</a>
           </div>
       </nav>
+      <div style="
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+        ">
+        <div style="
+          padding: 1% 1% 1% 1%;
+          background-color: #fff;
+        ">
+          <?php  
+          $sql = mysqli_query($link, 'SELECT `n_title`,`n_text` FROM `news`');
+    while ($result = mysqli_fetch_array($sql)) {
+      echo "<br>" ;
+      echo "<span style='font-weight: 700;'>{$result['n_title']}</span>";
+      echo "<br>" ;
+      echo "<span style='font-size: 90%;'>{$result['n_text']}</span>";
+      echo "<br>";
+    }?>
+        </div>
+      </div>  
     </form>
   
 </body>
