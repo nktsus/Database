@@ -41,14 +41,24 @@ font-family: 'Quicksand', sans-serif;
 
 .message-story{
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	background-color: #fff;
 	width: 60%;
 	margin-left: 20%;
+	margin-top: 3%;
 
 	font-family: 'Quicksand', sans-serif;
 }
 
+.message-container {
+	margin-top: 3%;
+	margin-left: 5%;
+}
 
-
-
+.back-link {
+	text-decoration: none;
+	text-align: center;
+	border: 1px solid black;
+	width: 10%;
+	margin-left: 45%;
+}
