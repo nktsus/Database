@@ -66,14 +66,20 @@ if(isset($_POST['submit'])){
           background-color: #fff;
         ">
           <?php  
-          $sql = mysqli_query($link, 'SELECT `n_title`,`n_text` FROM `news`');
+          $sql = mysqli_query($link, 'SELECT * FROM `news`');
     while ($result = mysqli_fetch_array($sql)) {
       echo "<br>" ;
       echo "<span style='font-weight: 700;'>{$result['n_title']}</span>";
       echo "<br>" ;
       echo "<span style='font-size: 90%;'>{$result['n_text']}</span>";
+      echo "<br>"; 
+      $tmp = $result['id'];
+      $sql1 = mysqli_query($link, "SELECT * FROM `likes` where like_postid = '$tmp'");
+      $numr = mysqli_num_rows($sql1);
+      echo "<span style='font-size: 90%;'>Лайков: {$numr}</span>";
       echo "<br>";
-    }?>
+      }
+    ?>
         </div>
       </div>  
     </form>
