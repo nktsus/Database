@@ -77,7 +77,17 @@ require_once("check1.php");
 			<div class="date-submit">
 				<input type="date" name="date">
             	<input name="submit" type="submit" value="Зарегистрироваться">
-            </div>	
+            </div>
+            <div style="margin-top: 3%;">
+            	<a href="livefeed.php"
+            	style="text-decoration: none;
+	color: #000;
+
+	border: 1px solid black;
+	padding: 0 1% 0 1%;" 
+            	>Назад</a>
+            </div>
+            <span class="invisible">invisible</span>
         </div>
     </form>
 </body>
