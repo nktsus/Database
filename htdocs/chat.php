@@ -38,7 +38,7 @@ ob_end_flush();
 <html>
 <head>
 	<title>Chat | SberMed</title>
-	<link rel="stylesheet" href="media/css/visit_reg_styles.css">
+	<link rel="stylesheet" href="media/css/chat-styles.css">
 </head>
 <body class="bg">
     <form method="POST" class="form-class">
@@ -48,7 +48,7 @@ ob_end_flush();
 				$sql1 = "SELECT * FROM `users`";
   				$result_select1 = mysqli_query($link, $sql1);
 
-  				echo "<select style = 'width: 230px;height: 22px;' name = 'messages'>";
+  				echo "<select style='width:60%; margin-left:20%;'  name = 'messages'>";
 			  	echo "<option value='0'></option>";
   				while($object1 = mysqli_fetch_object($result_select1)){
  				echo "<option value = '$object1->id' > $object1->username | $object1->firstname $object1->lastname </option>";}
@@ -56,13 +56,16 @@ ob_end_flush();
   				?>
 				<br>
 				<br>
-			<span>История сообщений</span>
-				
 			<div class="date-submit">
             	<input name="submit" type="submit" value="Показать сообщения">
             	<input name="submit2" type="submit" value="Написать сообщение">
-            </div>	
+            </div>
+            <span class="invisible">invisible</span>	
         </div>
+
     </form>
+    <div class="message-story">
+      <span>История сообщений</span>
+    </div>
 </body>
 </html>
